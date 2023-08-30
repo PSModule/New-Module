@@ -1,2 +1,3 @@
-# module_template
+# New-Module
+
 A template for module repos
