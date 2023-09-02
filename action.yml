@@ -21,7 +21,6 @@ runs:
       shell: pwsh
       run: |
         Write-Output '::group::New-Module'
-
         Write-Output '-------------------------------------------'
         Write-Output 'Action inputs:'
         $params = @{
@@ -29,9 +28,7 @@ runs:
             Verbose               = [System.Convert]::ToBoolean('${{ inputs.verbose }}')
         }
         $params.GetEnumerator() | Sort-Object -Property Name
-
         Write-Output '-------------------------------------------'
-
         . "$env:GITHUB_ACTION_PATH\scripts\main.ps1" @params
-
+        Write-Output '-------------------------------------------'
         Write-Output '::endgroup::'
