@@ -24,7 +24,7 @@ runs:
     - name: Run New-Module
       shell: pwsh
       run: |
-        Write-Output '::group::New-Module'
+        Write-Host '::group::New-Module'
         Write-Output '-------------------------------------------'
         Write-Output 'Action inputs:'
         $params = @{
@@ -36,4 +36,4 @@ runs:
         Write-Output '-------------------------------------------'
         . "$env:GITHUB_ACTION_PATH\scripts\main.ps1" @params
         Write-Output '-------------------------------------------'
-        Write-Output '::endgroup::'
+        Write-Host '::endgroup::'
